@@ -10,11 +10,5 @@
     "repository": {
       "type": "git",
       "url": "https://github.com/GonzaLopez23/CI_IngSoftw.git"
-    },
-    "author": "Martin Di Cesare",
-    "license": "ISC",
-    "bugs": {
-      "url": "https://github.com/MartinDiCesare/Trabajo-Practico-4/issues"
-    },
-    "homepage": "https://github.com/MartinDiCesare/Trabajo-Practico-4#readme"
-  }
+    }
+}
