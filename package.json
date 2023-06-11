@@ -2,13 +2,10 @@
     "name": "ci_ingsoftw",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
     "scripts": {
-      "test": "jest",
-      "build": "node suma"
-    },
-    "repository": {
-      "type": "git",
-      "url": "https://github.com/GonzaLopez23/CI_IngSoftw.git"
-    }
+        "test": "jest"
+      },
+      "devDependencies": {
+        "jest": "^27.0.6"
+      }
 }
