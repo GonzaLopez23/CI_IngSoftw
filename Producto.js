@@ -1,10 +1,10 @@
 class Producto {
   constructor(nombre, precio) {
     this.nombre = nombre;
-    this.precio = this.verificarPrecio(precio);
+    this.precio = this.setPrecio(precio);
   }
 
-  verificarPrecio(precio) {
+  setPrecio(precio) {
     if (precio < 0) {
       throw new Error('El precio no debe ser menor a 0.');
     }
