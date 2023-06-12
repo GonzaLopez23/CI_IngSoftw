@@ -10,6 +10,9 @@ class Producto {
     }
     return precio;
   }
+  getPrecio () {
+    return this.precio;
+  }
 }
 
 module.exports = Producto;
