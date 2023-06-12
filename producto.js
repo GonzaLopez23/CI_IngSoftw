@@ -4,7 +4,7 @@ class Producto {
   }
 
   setNombre(nombre) {
-    this.nombre = "Pantalon";
+    this.nombre = nombre;
   }
   
   getNombre() {
