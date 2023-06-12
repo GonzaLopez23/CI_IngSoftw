@@ -9,5 +9,5 @@ test('El precio del producto no debe ser menor a 0', () => {
 
   expect(() => {
     new Producto('Pantalones', -5);
-  }).toThrowError('El precio no puede ser menor a 0.');
+  }).toThrowError('El precio no debe ser menor a 0.');
 });
