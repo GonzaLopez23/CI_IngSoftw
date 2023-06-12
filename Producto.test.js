@@ -6,6 +6,7 @@ test('El precio del producto no debe ser menor a 0', () => {
   expect(producto1.precio).toBe(10);
 
   expect(() => {
-    new Producto('Pantalones', -5);
+    const producto2 new Producto();
+    producto2.setPrecio(-5);
   }).toThrowError('El precio no debe ser menor a 0.');
 });
