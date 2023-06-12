@@ -1,4 +1,4 @@
-const Producto = require('./Producto');
+const Producto = require('./producto');
 
 test('El precio del producto no debe ser menor a 0', () => {
   const producto1 = new Producto('Camiseta', 10);
