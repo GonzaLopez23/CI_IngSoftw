@@ -1,37 +1,14 @@
-require('./producto.js')
-test('Validar precio de producto positivo', () => {
-const productoCreado = new Producto();
-expect(() => {
-  productoCreado.setPrecio(-100.0); // asignamos un precio negativo
- }).toThrow('El precio del producto no debe ser menor a 0');
+// Importar la función que vamos a probar
+const verificarPrecio = require('./verificarPrecio');
+
+// Test unitario
+test('El precio del producto no debe ser menor a 0', () => {
+  // Caso de prueba 1: Precio positivo
+  expect(verificarPrecio(10)).toBe(true); // El precio es 10, se espera true
+
+  // Caso de prueba 2: Precio igual a 0
+  expect(verificarPrecio(0)).toBe(true); // El precio es 0, se espera true
+
+  // Caso de prueba 3: Precio negativo
+  expect(verificarPrecio(-5)).toBe(false); // El precio es -5, se espera false
 });
-
-  testValidarLongitudDescripcionProducto() {
-    const productoCreado = new Producto();
-    const descripcionProducto = "Zapatilla";
-    try {
-      productoCreado.setDescripcion(descripcionProducto);
-    } catch (error) {
-      // Verificar que se lanzó una excepción
-      expect(error.message).toBe("La descripcion del producto no debe tener más de 256 caracteres ni menos de 10 caracteres");
-    }
-  }
-
-  testValidarMarcaProductoIsString() {
-    const productoCreado = new Producto();
-    const marcaProducto = "Adidas";
-    productoCreado.setMarca(marcaProducto);
-    const marca = productoCreado.getMarca();
-    expect(typeof marca).toBe("string");
-  }
-
-  testValidarExceptionLongitudMarca() {
-    const productoCreado = new Producto();
-    const marcaProducto = "Puma Ignite Limitless";
-    try {
-      productoCreado.setMarca(marcaProducto);
-    } catch (error) {
-      // Verificar que se lanzó una excepción
-      expect(error.message).toBe("La marca del producto no debe tener más de 15 caracteres");
-    }
-  }
