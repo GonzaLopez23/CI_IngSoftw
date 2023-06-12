@@ -20,3 +20,10 @@ test('Descripcion del producto es de tipo String', () => {
   const description = producto1.getDescripcion();
   expect(typeof description).toBe('string');
 });
+
+test('Marca del producto mayor a 15 caracteres devuelve error', () => {
+  expect(() => {
+    const producto1 = new Producto();
+    producto1.setMarca("Puma Ignite Limitless");
+  }).toThrowError('La marca del producto no debe tener más de 15 caracteres.');
+});
