@@ -1,3 +1,5 @@
+const Producto = require('./producto');
+
 test('testGetNombre', () => {
   const producto1 = new Producto('Remera');
   // Verifica que el método getNombre devuelve 'Remera'
