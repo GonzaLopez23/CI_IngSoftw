@@ -11,3 +11,4 @@ class Producto {
     return precio;
   }
 }
+module.exports = Producto;
