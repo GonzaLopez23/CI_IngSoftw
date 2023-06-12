@@ -6,7 +6,7 @@ class Producto {
 
   verificarPrecio(precio) {
     if (precio < 0) {
-      throw new Error('El precio no puede ser menor a 0.');
+      throw new Error('El precio no debe ser menor a 0.');
     }
     return precio;
   }
