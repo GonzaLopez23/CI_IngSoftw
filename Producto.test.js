@@ -4,7 +4,7 @@ test('El precio del producto menor a 0 devuelve error', () => {
   expect(() => {
     const productoCreado = new Producto();
     productoCreado.setPrecio(-5);
-  }).toThrowError('El precio no debe ser menor a 0.');
+  }).toThrowError('El precio debe ser menor a 0.');
 });
 
 test('Descripcion del producto menor a 10 caracteres devuelve error', () => {
