@@ -29,6 +29,10 @@ class Producto {
       this.descripcion = descripcion; 
     }
   }
+  
+  getDescripcion(){
+   return this.descripcion; 
+  }
 }
 
 module.exports = Producto;
