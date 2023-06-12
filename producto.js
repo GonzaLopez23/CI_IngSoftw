@@ -11,3 +11,5 @@ class Producto {
     return this.nombre;
   }
 }
+
+module.exports = Producto;
