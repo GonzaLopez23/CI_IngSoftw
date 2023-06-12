@@ -1,13 +1,10 @@
 require('./producto.js')
-  test('testValidarPrecioProductoPositivo', () => {
-    const productoCreado = new Producto();
-    try {
-      productoCreado.setPrecio(-100.0); //asignamos un precio negativo
-    } catch (error) {
-      // Verificar que se lanzó una excepción
-      expect(error.message).toBe("El precio del producto no debe ser menor a 0");
-    }
-  });
+test('Validar precio de producto positivo', () => {
+const productoCreado = new Producto();
+expect(() => {
+  productoCreado.setPrecio(-100.0); // asignamos un precio negativo
+ }).toThrow('El precio del producto no debe ser menor a 0');
+});
 
   testValidarLongitudDescripcionProducto() {
     const productoCreado = new Producto();
