@@ -3,11 +3,11 @@ class Producto {
    
   }
   
-  function setNombre (nombre) {
+  function setNombre(nombre) {
     this.nombre = nombre;
   }
   
-  function getNombre () {
+  function getNombre() {
     return this.nombre;
   }
   
@@ -18,7 +18,7 @@ class Producto {
     this.precio = precio;
   }
   
-  function getPrecio () {
+  function getPrecio() {
     return this.precio;
   }
   
