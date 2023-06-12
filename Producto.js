@@ -3,22 +3,22 @@ class Producto {
    
   }
   
-  function setNombre(nombre) {
+  function setNombre(nombre){
     this.nombre = nombre;
   }
   
-  function getNombre() {
+  function getNombre(){
     return this.nombre;
   }
   
-  function setPrecio(precio) {
+  function setPrecio(precio){
     if (precio < 0) {
       throw new Error('El precio no debe ser menor a 0.');
     }
     this.precio = precio;
   }
   
-  function getPrecio() {
+  function getPrecio(){
     return this.precio;
   }
   
