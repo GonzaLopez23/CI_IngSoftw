@@ -4,7 +4,7 @@ class Producto {
   }
 
   setNombre(nombre) {
-    this.nombre = "funca";
+    this.nombre = "funca?";
   }
   
   getNombre() {
