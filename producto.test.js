@@ -1,5 +1,5 @@
-class TestsUnitarios {
-  testValidarPrecioProductoPositivo() {
+require('./producto.js')
+  test('testValidarPrecioProductoPositivo', () => {
     const productoCreado = new Producto();
     try {
       productoCreado.setPrecio(-100.0); //asignamos un precio negativo
@@ -7,7 +7,7 @@ class TestsUnitarios {
       // Verificar que se lanzó una excepción
       expect(error.message).toBe("El precio del producto no debe ser menor a 0");
     }
-  }
+  });
 
   testValidarLongitudDescripcionProducto() {
     const productoCreado = new Producto();
@@ -38,4 +38,3 @@ class TestsUnitarios {
       expect(error.message).toBe("La marca del producto no debe tener más de 15 caracteres");
     }
   }
-}
