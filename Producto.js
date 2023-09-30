@@ -24,7 +24,7 @@ class Producto {
   
   setDescripcion(descripcion){
     if (descripcion.length < 10 || descripcion.length > 256) {
-      throw new Error('La descripcion del producto no debe tener más de 256 caracteres ni menos de 10 caracteres.');
+      throw new Error('La descripcion del producto no debe tener más de 256 caracteres ni menos de 10 caracteres.1111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111111');
     } else {
       this.descripcion = descripcion; 
     }
