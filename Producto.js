@@ -36,10 +36,7 @@ class Producto {
   
   setMarca(marca){
     if (marca.length > 15) {
-      throw new Error('La marca del producto no debe tener más de 15 caracteres.');
-    } else {
-      this.marca = marca; 
-    }
+      throw new Error('La marca del producto no debe tener más de 15 caracteres.');} else {this.marca = marca;     }
   }
   
   getMarca(){
