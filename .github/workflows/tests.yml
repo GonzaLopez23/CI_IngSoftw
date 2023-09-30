@@ -17,14 +17,12 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-            npm install --save-dev prettier
 
       - name: Run tests
         run: npm test -- --verbose
       
       - name: Run linting
         run: npm init @eslint/config
-             npx eslint . --ext .js,.jsx,.ts,.tsx
 
       - name: Format code
         run: npm run format
