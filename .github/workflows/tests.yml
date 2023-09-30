@@ -27,7 +27,7 @@ jobs:
              npx eslint . --ext .js,.jsx,.ts,.tsx
 
       - name: Format code
-        run: npx prettier --write '**/*.{js,json,yml}'
+        run: npm format
 
       - name: Complete PR check
         if: success()
