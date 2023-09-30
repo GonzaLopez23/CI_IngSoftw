@@ -4,7 +4,7 @@
     "description": "",
     "scripts": {
         "test": "jest",
-        "format": "prettier --write '*.js'"
+        "format": "prettier --write --check '*.js'"
     },
     "devDependencies": {
         "jest": "^29.5.0"
