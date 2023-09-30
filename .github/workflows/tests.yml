@@ -28,7 +28,8 @@ jobs:
         run: npm test -- --verbose
       
       - name: Run linting
-        run: npx eslint . --ext .js,.jsx,.ts,.tsx
+        run: npm init @eslint/config
+             npx eslint . --ext .js,.jsx,.ts,.tsx
 
       - name: Format code
         run: npm run format
