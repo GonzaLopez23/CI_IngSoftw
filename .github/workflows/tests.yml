@@ -33,7 +33,7 @@ jobs:
              npx eslint . --ext .js,.jsx,.ts,.tsx
 
       - name: Format code
-        run: npm run format
+        run: npm run format 
 
       - name: Complete PR check
         if: success()
