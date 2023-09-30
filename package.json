@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "description": "",
     "scripts": {
-        "test": "jest"
+        "test": "jest",
+        "format": "eslint --fix ."
     },
     "devDependencies": {
         "eslint": "^8.50.0",
