@@ -4,7 +4,9 @@
     "description": "",
     "scripts": {
         "test": "jest",
-        "format": "prettier --write --check --no-config '*.js'"
+        "lint-staged": {
+    "**/*": "prettier --write --check --ignore-unknown"
+  }
     },
     "devDependencies": {
         "jest": "^29.5.0"
