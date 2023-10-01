@@ -30,7 +30,7 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           # This part is also where you can pass other options, for example:
-          prettier_options: --check *.js
+          prettier_options: --check --write *.js
           clean_node_folder: false
 
       - name: Complete PR check
