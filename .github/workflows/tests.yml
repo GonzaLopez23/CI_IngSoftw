@@ -26,8 +26,12 @@ jobs:
         run: npm init @eslint/config
              npx eslint . --ext .js,.jsx,.ts,.tsx
       - name: Prettify code
-        run: npx prettier --check '*.js'
-
+        run: npm run format
+             git status
+      - uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
       - name: Complete PR check
         if: success()
         run: echo "Pipeline completed successfully!"
