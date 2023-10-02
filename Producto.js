@@ -1,4 +1,9 @@
 class Producto {
+
+  message = 'quiero que prettier reformatee esta línea que no modificaría la lógica del programa ' +
+    '1111111 1111111111111111 1111111111111111111 1111111111111111111111111 1111111111111111';
+ 
+
   constructor() {
    
   }
