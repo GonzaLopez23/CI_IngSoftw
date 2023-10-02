@@ -27,7 +27,8 @@ jobs:
              npx eslint . --ext .js,.jsx,.ts,.tsx
       - name: Prettify code
         run: npx prettier --check '*.js'
+      - name: Commit formatted files
+        run: git add . && git diff-index --quiet HEAD || git commit -m "Prettier formatting"
 
-      - name: Complete PR check
-        if: success()
-        run: echo "Pipeline completed successfully!"
+      - name: Push changes
+        run: git push
