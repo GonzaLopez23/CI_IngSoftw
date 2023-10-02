@@ -1,4 +1,7 @@
 class Producto {
+
+  const message = 'quiero que prettier reformatee esta línea que no modificaría la lógica del programa'
+
   constructor() {
    
   }
