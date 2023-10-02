@@ -26,7 +26,7 @@ jobs:
         run: npm init @eslint/config
              npx eslint . --ext .js,.jsx,.ts,.tsx
       - name: Prettify code
-        run: npm run format
+        run: npm prettier --check --write '*.js'
 
       - name: Complete PR check
         if: success()
