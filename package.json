@@ -1,16 +1,26 @@
 {
-    "name": "ci_ingsoftw",
-    "version": "1.0.0",
-    "description": "",
-    "scripts": {
-        "test": "jest",
-        "format": "prettier --write ."
-    },
-    "devDependencies": {
-        "eslint": "^8.50.0",
-        "eslint-config-prettier": "^9.0.0",
-        "eslint-plugin-prettier": "^5.0.0",
-        "jest": "^29.5.0",
-        "prettier": "^3.0.3"
+  "name": "ci_ingsoftw",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "jest": "^29.5.0",
+    "prettier": "^3.0.3",
+    "lint-staged": "^11.0.0",
+    "husky": "^7.0.0"
+  },
+  "lint-staged": {
+    "*.js": ["prettier --write", "git add"]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
+  }
 }
