@@ -22,7 +22,7 @@ jobs:
         run: npm test -- --verbose
 
       - name: Run linting
-        run: npm init @eslint/config
+        run: npm run lint
 
       - name: Format code
         run: npx prettier --check .
