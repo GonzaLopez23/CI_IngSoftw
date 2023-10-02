@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "test": "jest",
-    "format": "prettier --check ."
+    "format": "prettier --write ."
   },
   "devDependencies": {
     "eslint": "^8.50.0",
@@ -16,7 +16,10 @@
     "husky": "^7.0.0"
   },
   "lint-staged": {
-    "*.js": ["prettier --write", "git add"]
+    "*.js": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
