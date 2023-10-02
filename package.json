@@ -5,7 +5,8 @@
   "scripts": {
     "test": "jest",
     "format": "prettier --check .",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "build": "webpack"
   },
   "devDependencies": {
     "eslint": "^8.50.0",
