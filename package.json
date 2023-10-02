@@ -4,7 +4,7 @@
     "description": "",
     "scripts": {
         "test": "jest",
-        "format": "prettier --write 'CI_IngSoftw/**/*.js'"
+        "format": "prettier --write '*.js'"
     },
     "devDependencies": {
         "eslint": "^8.50.0",
