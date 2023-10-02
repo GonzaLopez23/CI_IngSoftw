@@ -27,7 +27,6 @@ jobs:
              npx eslint . --ext .js,.jsx,.ts,.tsx
       - name: Prettify code
         run: npm run format
-             git status
       - uses: mikeal/publish-to-github-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
