@@ -30,3 +30,6 @@ jobs:
       - name: Complete PR check
         if: success()
         run: echo "Pipeline completed successfully!"
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
