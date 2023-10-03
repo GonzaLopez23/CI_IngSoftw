@@ -12,7 +12,7 @@ class Producto {
   setPrecio(precio) {
     if (precio < 0) {
       throw new Error(
-        'El precio no debe ser menor a 0.',
+        'El precio no debe ser menor a 0. ',
       );
     }
     this.precio = precio;
