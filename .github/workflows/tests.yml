@@ -29,7 +29,3 @@ jobs:
 
       - name: Format code
         run: npx prettier --check .
-
-      - name: Complete PR check
-        if: success()
-        run: echo "Pipeline completed successfully!"
