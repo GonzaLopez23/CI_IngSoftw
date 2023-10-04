@@ -2,7 +2,7 @@ const longString =
   'Esta es una cadena de texto muy larga que debería ser formateada de acuerdo a las reglas que estableciste en el archivo .prettierrc.json';
 let x = 10;
 
-if (x = 20) {
+if ((x = 20)) {
   console.log('x es igual a 20');
 }
 
