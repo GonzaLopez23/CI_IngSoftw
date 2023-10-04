@@ -2,7 +2,7 @@ class Producto {
   constructor() {}
 
   setNombre(nombre) {
-    this.nombre1 = nombre;
+    this.nombre = nombre
   }
 
   getNombre() {
