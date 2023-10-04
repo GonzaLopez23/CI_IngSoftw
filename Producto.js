@@ -1,8 +1,11 @@
 class Producto {
   constructor() {}
-
+  
   setNombre(nombre) {
     this.nombre = nombre;
+    if (x = 20) {
+    console.log('x es igual a 20');
+  }
   }
 
   getNombre() {
