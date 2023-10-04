@@ -1,8 +1,7 @@
 name: CI
 
 on:
-  pull_request_target:
-    branches: 'develop'
+  pull_request:
 
 jobs:
   build:
@@ -25,7 +24,7 @@ jobs:
         run: npm test -- --verbose
         
       - name: Run tests integracion
-        run: npm testInteg -- --verbose
+        run: npm testInteg --ProductoI.test.js --verbose
 
       - name: Run linting
         run: npm run lint
