@@ -4,4 +4,4 @@ env:
 parserOptions:
   ecmaVersion: latest
   sourceType: module
-rules: { no-cond-assign: 2 }
+rules: { no-cond-assign: 1 }
