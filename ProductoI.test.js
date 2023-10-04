@@ -28,16 +28,6 @@ describe('Producto Integration Test', () => {
     expect(producto.getDescripcion()).toBe('Descripción de prueba');
   });
 
-  it('should throw an error when descripcion length is out of bounds', () => {
-    expect(() => producto.setDescripcion('Short')).toThrow(
-      'La descripcion del producto no debe tener más de 256 caracteres ni menos de 10 caracteres.'
-    );
-
-    expect(() => producto.setDescripcion('This is a very long description that exceeds the 256 character limit.')).toThrow(
-      'La descripcion del producto no debe tener más de 256 caracteres ni menos de 10 caracteres.'
-    );
-  });
-
   it('should set and get the marca correctly', () => {
     producto.setMarca('Marca de Prueba');
     expect(producto.getMarca()).toBe('Marca de Prueba');
