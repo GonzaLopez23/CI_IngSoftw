@@ -1,41 +1,25 @@
-const Producto = require('./Producto'); // Asegúrate de que la ruta sea correcta
+const Producto = require('./Producto'); 
+const Catalogo = require('./Catalogo');
 
-describe('Prueba de Integración de Producto', () => {
-  let producto;
+describe('Test de integración', () => {
+  it('debería mostrar nombres y precios de productos en el catálogo', () => {
+    const producto1 = new Producto();
+    producto1.setNombre('Producto 1');
+    producto1.setPrecio(100);
 
-  beforeEach(() => {
-    producto = new Producto();
-  });
+    const producto2 = new Producto();
+    producto2.setNombre('Producto 2');
+    producto2.setPrecio(200);
 
-  it('debería establecer y obtener el nombre correctamente', () => {
-    producto.setNombre('Producto de Prueba');
-    expect(producto.getNombre()).toBe('Producto de Prueba');
-  });
+    const catalogo = new Catalogo();
+    catalogo.agregarProducto(producto1);
+    catalogo.agregarProducto(producto2);
 
-  it('debería establecer y obtener el precio correctamente', () => {
-    producto.setPrecio(25.99);
-    expect(producto.getPrecio()).toBe(25.99);
-  });
+    const productosEnCatalogo = catalogo.obtenerProductos();
 
-  it('debería lanzar un error cuando el precio es menor que 0', () => {
-    expect(() => producto.setPrecio(-10)).toThrow(
-      'El precio no debe ser menor a 0.'
-    );
-  });
-
-  it('debería establecer y obtener la descripción correctamente', () => {
-    producto.setDescripcion('Descripción de prueba');
-    expect(producto.getDescripcion()).toBe('Descripción de prueba');
-  });
-
-  it('debería establecer y obtener la marca correctamente', () => {
-    producto.setMarca('Marca de Prueba');
-    expect(producto.getMarca()).toBe('Marca de Prueba');
-  });
-
-  it('debería lanzar un error cuando la longitud de la marca es mayor que 15', () => {
-    expect(() => producto.setMarca('Un Nombre de Marca Muy Largo')).toThrow(
-      'La marca del producto no debe tener más de 15 caracteres.'
-    );
+    expect(productosEnCatalogo).toEqual([
+      { nombre: 'Producto 1', precio: 100 },
+      { nombre: 'Producto 2', precio: 200 }
+    ]);
   });
 });
