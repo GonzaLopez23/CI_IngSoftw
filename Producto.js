@@ -1,7 +1,6 @@
 class Producto {
   constructor() {}
-  let x = 10;
-  if ((x = 20)) {
+  if (x = 20) {
     console.log('x es igual a 20');
   }
 
