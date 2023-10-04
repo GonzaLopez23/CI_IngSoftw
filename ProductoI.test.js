@@ -1,4 +1,4 @@
-const Producto = require('./Producto'); 
+const Producto = require('./Producto');
 const Catalogo = require('./Catalogo');
 
 describe('Test de integración', () => {
@@ -15,11 +15,20 @@ describe('Test de integración', () => {
     catalogo.agregarProducto(producto1);
     catalogo.agregarProducto(producto2);
 
-    const productosEnCatalogo = catalogo.obtenerProductos();
+    const productosEnCatalogo =
+      catalogo.obtenerProductos();
 
-    expect(productosEnCatalogo).toEqual([
-      { nombre: 'Producto 1', precio: 100 },
-      { nombre: 'Producto 2', precio: 200 }
-    ]);
+    expect(productosEnCatalogo).toEqual(
+      [
+        {
+          nombre: 'Producto 1',
+          precio: 100,
+        },
+        {
+          nombre: 'Producto 2',
+          precio: 200,
+        },
+      ],
+    );
   });
 });

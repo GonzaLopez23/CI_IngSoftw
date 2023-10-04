@@ -8,10 +8,12 @@ class Catalogo {
   }
 
   obtenerProductos() {
-    return this.productos.map(producto => ({
-      nombre: producto.getNombre(),
-      precio: producto.getPrecio()
-    }));
+    return this.productos.map(
+      producto => ({
+        nombre: producto.getNombre(),
+        precio: producto.getPrecio(),
+      }),
+    );
   }
 }
 
