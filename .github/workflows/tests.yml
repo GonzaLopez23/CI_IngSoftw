@@ -21,8 +21,11 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Run tests
+      - name: Run tests unitarios
         run: npm test -- --verbose
+        
+      - name: Run tests integracion
+        run: npm testInteg -- --verbose
 
       - name: Run linting
         run: npm run lint

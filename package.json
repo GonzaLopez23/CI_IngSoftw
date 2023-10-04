@@ -4,6 +4,7 @@
   "description": "",
   "scripts": {
     "test": "jest",
+    "testInteg": "jest Producto.testI.js",
     "format": "prettier --check .",
     "lint": "eslint ."
   },
