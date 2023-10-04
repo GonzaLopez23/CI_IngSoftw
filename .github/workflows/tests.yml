@@ -21,10 +21,10 @@ jobs:
         run: npm install
 
       - name: Run tests unitarios
-        run: npm test -- --verbose
+        run: npm test Producto.test.js --verbose
         
       - name: Run tests integracion
-        run: npm run test ProductoI.test.js --verbose
+        run: npm test ProductoI.test.js --verbose
 
       - name: Run linting
         run: npm run lint
