@@ -2,7 +2,7 @@ const Producto = require('./Producto');
 const Catalogo = require('./Catalogo');
 
 describe('Test de integración', () => {
-  it('debería mostrar nombres y precios de productos en el catálogo', () => {
+  test('debería mostrar nombres y precios de productos en el catálogo', () => {
     const producto1 = new Producto();
     producto1.setNombre('Producto 1');
     producto1.setPrecio(100);
@@ -34,7 +34,7 @@ describe('Test de integración', () => {
 });
 
 describe('Test de integración', () => {
-  it('debería buscar un producto por nombre', () => {
+  test('debería buscar un producto por nombre', () => {
     const producto1 = new Producto();
     producto1.setNombre('Producto A');
     producto1.setPrecio(100);
