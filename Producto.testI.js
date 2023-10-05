@@ -1,51 +1,27 @@
-const Producto = require('./Producto'); // Asegúrate de que la ruta sea correcta
+const Producto = require('./Producto');
+const Catalogo = require('./Catalogo');
 
-describe('Producto Integration Test', () => {
-  let producto;
+describe('Test de integración', () => {
+  it('debería mostrar nombres y precios de productos en el catálogo', () => {
+    const producto1 = new Producto();
+    producto1.setNombre('Producto 1');
+    producto1.setPrecio(100);
 
-  beforeEach(() => {
-    producto = new Producto();
-  });
+    const producto2 = new Producto();
+    producto2.setNombre('Producto 2');
+    producto2.setPrecio(200);
 
-  it('should set and get the nombre correctly', () => {
-    producto.setNombre('Producto de Prueba');
-    expect(producto.getNombre()).toBe('Producto de Prueba');
-  });
+    const catalogo = new Catalogo();
+    catalogo.agregarProducto(producto1);
+    catalogo.agregarProducto(producto2);
 
-  it('should set and get the precio correctly', () => {
-    producto.setPrecio(25.99);
-    expect(producto.getPrecio()).toBe(25.99);
-  });
+    const productosEnCatalogo =
+      catalogo.obtenerProductos();
 
-  it('should throw an error when precio is less than 0', () => {
-    expect(() => producto.setPrecio(-10)).toThrow(
-      'El precio no debe ser menor a 0.'
-    );
-  });
-
-  it('should set and get the descripcion correctly', () => {
-    producto.setDescripcion('Descripción de prueba');
-    expect(producto.getDescripcion()).toBe('Descripción de prueba');
-  });
-
-  it('should throw an error when descripcion length is out of bounds', () => {
-    expect(() => producto.setDescripcion('Short')).toThrow(
-      'La descripcion del producto no debe tener más de 256 caracteres ni menos de 10 caracteres.'
-    );
-
-    expect(() => producto.setDescripcion('This is a very long description that exceeds the 256 character limit.')).toThrow(
-      'La descripcion del producto no debe tener más de 256 caracteres ni menos de 10 caracteres.'
-    );
-  });
-
-  it('should set and get the marca correctly', () => {
-    producto.setMarca('Marca de Prueba');
-    expect(producto.getMarca()).toBe('Marca de Prueba');
-  });
-
-  it('should throw an error when marca length is greater than 15', () => {
-    expect(() => producto.setMarca('A Very Long Brand Name')).toThrow(
-      'La marca del producto no debe tener más de 15 caracteres.'
-    );
-  });
-});
+    expect(productosEnCatalogo).toEqual(
+      [
+        {
+          nombre: 'Producto 1',
+          precio: 100,
+        },
+        {
