@@ -15,6 +15,13 @@ class Catalogo {
       }),
     );
   }
+
+  buscarProductoPorNombre(nombre) {
+    return this.productos.filter(
+      producto =>
+        producto.getNombre() === nombre,
+    );
+  }
 }
 
 module.exports = Catalogo;
