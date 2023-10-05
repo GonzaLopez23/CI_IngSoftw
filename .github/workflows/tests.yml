@@ -25,7 +25,7 @@ jobs:
         run: npm test Producto.test.js --verbose
         
       - name: Run tests integracion
-        run: npm test Producto.testI.js --verbose
+        run: npm test ProductoI.test.js --verbose
 
       - name: Run linting
         run: npm run lint
