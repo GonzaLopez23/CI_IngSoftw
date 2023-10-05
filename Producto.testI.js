@@ -25,3 +25,40 @@ describe('Test de integración', () => {
           precio: 100,
         },
         {
+          nombre: 'Producto 2',
+          precio: 200,
+        },
+      ],
+    );
+  });
+});
+
+describe('Test de integración', () => {
+  it('debería buscar un producto por nombre', () => {
+    const producto1 = new Producto();
+    producto1.setNombre('Producto A');
+    producto1.setPrecio(100);
+
+    const producto2 = new Producto();
+    producto2.setNombre('Producto B');
+    producto2.setPrecio(200);
+
+    const catalogo = new Catalogo();
+    catalogo.agregarProducto(producto1);
+    catalogo.agregarProducto(producto2);
+
+    const productosEncontrados =
+      catalogo.buscarProductoPorNombre(
+        'Producto B',
+      );
+
+    expect(
+      productosEncontrados,
+    ).toEqual([
+      {
+        nombre: 'Producto B',
+        precio: 200,
+      },
+    ]);
+  });
+});
